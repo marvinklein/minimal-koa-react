@@ -1,0 +1,20 @@
+{
+  "name": "minimal-koa-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-mount": "^4.0.0",
+    "koa-static": "^5.0.0"
+  },
+  "scripts": {
+    "build": "cd web && npm run build",
+    "dev": "concurrently 'cd web && npm start' 'cd api && npm start'",
+    "prod": "node app.js",
+    "postinstall": "cd api && npm install && cd ../web && npm install"
+  },
+  "devDependencies": {
+    "eslint-config-react-app": "^4.0.1",
+    "concurrently": "^4.1.1"
+  }
+}
